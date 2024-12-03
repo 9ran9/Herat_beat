@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/taidong_yyes"
+        android:title="胎动计数" />
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/gongsuowrite"
+        android:title="宫缩记录" />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="AI预测" />
+
+</menu>

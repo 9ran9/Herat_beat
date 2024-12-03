@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.count.taidong">
+
+
+    <ImageView
+        android:id="@+id/predict_big"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:src="@drawable/preditc_bbig"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/youxiaotai"
+        android:layout_width="wrap_content"
+        android:layout_height="87dp"
+        android:src="@drawable/youxiaotai"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/predict_big" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView"
+        android:layout_width="183dp"
+        android:layout_height="222dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/pat_star"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/youxiaotai" />
+
+    <ImageView
+        android:id="@+id/servicee"
+        android:layout_width="47dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:clickable="true"
+        android:src="@drawable/homeee"
+        app:layout_constraintBottom_toBottomOf="@+id/pause"
+        app:layout_constraintStart_toEndOf="@+id/pause"
+        app:layout_constraintTop_toTopOf="@+id/pause"
+        app:layout_constraintVertical_bias="0.32" />
+
+
+
+    <ImageView
+        android:id="@+id/predict_small"
+        android:layout_width="74dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="76dp"
+        android:visibility="invisible"
+        android:src="@drawable/ai_small"
+        app:layout_constraintBottom_toBottomOf="@+id/predict_big"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/predict_big"
+        app:layout_constraintVertical_bias="0.619" />
+
+    <TextView
+        android:id="@+id/yujingtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="84dp"
+        android:text="AI预警实时监测中"
+        android:textColor="#0033E6"
+        app:layout_constraintBottom_toBottomOf="@+id/predict_big"
+        app:layout_constraintEnd_toStartOf="@+id/predict_small"
+        app:layout_constraintTop_toTopOf="@+id/predict_big"
+        app:layout_constraintVertical_bias="0.484" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF3F7BEE"
+        app:layout_constraintBottom_toBottomOf="@+id/predict_big"
+        app:layout_constraintEnd_toEndOf="@+id/predict_small"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/predict_small"
+        app:layout_constraintTop_toTopOf="@+id/predict_big"
+        app:layout_constraintVertical_bias="0.484" />
+
+
+
+    <TextView
+        android:id="@+id/youxiaotext"
+        android:layout_width="18dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="12dp"
+        android:text="0"
+        android:textColor="#F10202"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="@+id/youxiaotai"
+        app:layout_constraintEnd_toEndOf="@+id/youxiaotai"
+        app:layout_constraintHorizontal_bias="0.687"
+        app:layout_constraintStart_toStartOf="@+id/youxiaotai" />
+
+    <ImageView
+        android:id="@+id/last_time"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/lasttime"
+        app:layout_constraintBottom_toBottomOf="@+id/circleImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.644"
+        app:layout_constraintStart_toEndOf="@+id/circleImageView" />
+
+    <TextView
+        android:id="@+id/lasttime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textSize="16sp"
+        android:textColor="#EB7C7C"
+        app:layout_constraintBottom_toBottomOf="@+id/last_time"
+        app:layout_constraintEnd_toEndOf="@+id/last_time"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toStartOf="@+id/last_time"
+        app:layout_constraintTop_toTopOf="@+id/last_time"
+        app:layout_constraintVertical_bias="0.479" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circleImageView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="-2dp">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="165dp"
+                            android:layout_height="87dp"
+                            android:src="@drawable/kaishi"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/imageview2"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintHorizontal_chainStyle="spread"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/starttime"
+                            android:layout_width="50dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginBottom="28dp"
+                            android:text="00:00"
+                            android:textColor="#F09000"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView" />
+
+                        <ImageView
+                            android:id="@+id/imageview2"
+                            android:layout_width="169dp"
+                            android:layout_height="104dp"
+                            android:src="@drawable/dianji"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="1"
+                            app:layout_constraintHorizontal_chainStyle="spread"
+                            app:layout_constraintStart_toEndOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/pattime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="44dp"
+                            android:layout_marginBottom="24dp"
+                            android:text="0"
+                            android:textColor="#3DEF00"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/imageview2" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </RelativeLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/pause"
+        android:layout_width="167dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/tingzhi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <ImageView
+        android:id="@+id/konwige"
+        android:layout_width="46dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/knnoww"
+        app:layout_constraintEnd_toStartOf="@+id/pause"
+        app:layout_constraintHorizontal_bias="0.861"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pause" />
+</androidx.constraintlayout.widget.ConstraintLayout>
